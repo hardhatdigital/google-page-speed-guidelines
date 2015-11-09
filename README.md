@@ -59,6 +59,7 @@ Google Page Speed Insight Rules:
 ## 9. Remove Render-Blocking JavaScript
 > Avoid referencing a blocking external JavaScript file in the above-the-fold portion of the page.
 
+* Use [the new Typekit embeded code](http://blog.typekit.com/2015/08/04/new-embed-code-for-asynchronous-font-loading/) to load typekit asynchronously
 * Enable asynchronous loading of scripts in Production environment:
 
 `<%= javascript_include_tag 'application', async: Rails.env.production? %>`
