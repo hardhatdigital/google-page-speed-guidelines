@@ -34,7 +34,8 @@ location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
   add_header Cache-Control "public";
 }
 ```
-* Configure Rails to validate cached responses with ETags (Conditional HTTP Caching). 
+* If enable Gzip compression and want to use Rails Http Caching, upgrade to `nginx 1.7.3 or higher`, and use [Rails weak etags](https://github.com/johnnaegle/rails_weak_etags) gem. The reason is that Nginx strip etags by default. More details: [Rails & Weak ETags](http://stackoverflow.com/questions/18693718/weak-etags-in-rails)
+* ***Check above point if want to use Rails HTTP Caching***. Configure Rails to validate cached responses with ETags (Conditional HTTP Caching). 
   * [Introduction to Conditional HTTP Caching wit h Rails](https://robots.thoughtbot.com/introduction-to-conditional-http-caching-with-rails)
   * [How etags works in Rails](http://mohanraj-nagasamy.github.io/blog/2014/02/22/browser-cache-how-etags-works-in-rails-3-and-rails-4/)
   * [RailsCast - HTTP Caching](https://www.youtube.com/watch?v=8iCPR9BqlNA)
