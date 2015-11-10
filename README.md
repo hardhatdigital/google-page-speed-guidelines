@@ -70,7 +70,7 @@ location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
 > Avoid referencing a blocking external JavaScript file in the above-the-fold portion of the page.
 
 * Use [the new Typekit embeded code](http://blog.typekit.com/2015/08/04/new-embed-code-for-asynchronous-font-loading/) to load typekit asynchronously
-* If using Sharethis plugin, Use [Asynchronous Sharethis Loading](https://techblog.willshouse.com/2014/06/07/sharethis-asynchronous-javascript-loading/) instead.
+* If using [Sharethis JS plugin](http://www.sharethis.com/), Use [Asynchronous Sharethis Loading](https://techblog.willshouse.com/2014/06/07/sharethis-asynchronous-javascript-loading/) instead.
 * Enable asynchronous loading of scripts in Production environment:
 
 `<%= javascript_include_tag 'application', async: Rails.env.production? %>`
