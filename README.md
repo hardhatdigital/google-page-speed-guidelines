@@ -25,6 +25,15 @@ Google Page Speed Insight Rules:
 > Ensure that the response from server includes caching headers or the resources are specified to be cached for only a short time.
 
 * Move favicon.ico to assets folder and use `favicon_link_tag`.
+* Use the following Nginx config to ensure http cache-control on images in /public/images directory:
+```
+# Media: images, icons, video, audio, HTC
+location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
+  expires 1M;
+  access_log off;
+  add_header Cache-Control "public";
+}
+```
 * Configure Rails to validate cached responses with ETags (Conditional HTTP Caching). 
   * [Introduction to Conditional HTTP Caching wit h Rails](https://robots.thoughtbot.com/introduction-to-conditional-http-caching-with-rails)
   * [How etags works in Rails](http://mohanraj-nagasamy.github.io/blog/2014/02/22/browser-cache-how-etags-works-in-rails-3-and-rails-4/)
