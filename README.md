@@ -1,6 +1,9 @@
 Google Page Speed Insight Rules:
 ===========
 
+## 0. [Install Google Page Speed Module](https://developers.google.com/speed/pagespeed/module/)
+> Google’s pagespeed module gives you a number of tools that can speed up front-end performance by making minor tweaks (trimming the domain out of local URLs, inserting DNS prefetch tags, collapsing whitespace) or major ones (lazy-loading images)
+
 ## 1. Avoid Landing Page Redirects
 > Avoid having more than one redirects from the given url to the final landing page.
 
